@@ -1,0 +1,1 @@
+Running Sale = CALCULATE([Total Sale Measure], Filter(all(Sales), Sales[Sale Date] <= MAX(Sales[Sale Date]) ))
