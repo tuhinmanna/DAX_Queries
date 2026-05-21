@@ -1,0 +1,15 @@
+As a developer we should have a pro license.
+
+We have Free, Pro , Premium , PPU License
+
+Difference:
+
+For PowerBI Sepcific:
+Pro Max Model Size 1 GB
+PPU 100GB
+
+Refresh 8/Day vs 48/Day
+
+Storage 10Gb/license vs 100TB
+
+Now in Fabric all are same as PPU , but it have either reserved capacity or pay as you go
