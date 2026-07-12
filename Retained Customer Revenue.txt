@@ -1,0 +1,25 @@
+Retained Customer Revenue =
+VAR CurrentCustomers =
+    CALCULATETABLE(
+        VALUES(FactSales[Customer]),
+        DATESYTD('Date'[Date])
+    )
+
+VAR PreviousCustomers =
+    CALCULATETABLE(
+        VALUES(FactSales[Customer]),
+        DATEADD('Date'[Date],-1,YEAR)
+    )
+
+VAR RetainedCustomers =
+    INTERSECT(
+        CurrentCustomers,
+        PreviousCustomers
+    )
+
+RETURN
+
+CALCULATE(
+    SUM(FactSales[Sales]),
+    KEEPFILTERS(RetainedCustomers)
+)
